@@ -53,7 +53,7 @@ public class TableComponent extends MarkupComponent<TableComponent.Parameters> {
                     return new MarkupTableColumn(column.getId().getName())
                             .withWidthRatio(widthRatio)
                             .withHeaderColumn(Boolean.parseBoolean(column.getMetaData().get(HEADER_COLUMN).getOrElse("false")))
-                            .withMarkupSpecifiers(MarkupLanguage.ASCIIDOC, ".^" + widthRatio + "a");
+                            .withMarkupSpecifiers(MarkupLanguage.ASCIIDOC, ".^" + widthRatio);
                 }
         ).toJavaList();
 

@@ -33,7 +33,7 @@ public class Labels {
     public static final String NAME_COLUMN = "name_column";
     public static final String DESCRIPTION_COLUMN = "description_column";
     public static final String SCOPES_COLUMN = "scopes_column";
-    public static final String DESCRIPTION = DESCRIPTION_COLUMN;
+    public static final String DESCRIPTION = "description";
     public static final String PRODUCES = "produces";
     public static final String CONSUMES = "consumes";
     public static final String TAGS = "tags";
