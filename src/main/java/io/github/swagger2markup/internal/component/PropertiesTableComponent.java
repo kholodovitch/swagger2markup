@@ -116,9 +116,16 @@ public class PropertiesTableComponent extends MarkupComponent<PropertiesTableCom
                 }
 
                 MarkupDocBuilder descriptionContent = copyMarkupDocBuilder(markupDocBuilder);
+                String title = property.getTitle();
+				if (isNotBlank(title))
+                    descriptionContent.boldText(title);
+
                 String description = markupDescription(config.getSwaggerMarkupLanguage(), markupDocBuilder, property.getDescription());
-                if (isNotBlank(description))
+                if (isNotBlank(description)) {
+    				if (isNotBlank(descriptionContent.toString()))
+    					descriptionContent.newLine(true);
                     descriptionContent.text(description);
+                }
 
                 if (optionalDefaultValue.isPresent()) {
                     if (isNotBlank(descriptionContent.toString())) {
